@@ -6,7 +6,8 @@ import { SlideStage } from '@/features/media-renderers'
 export function SlideshowMode({ api }: ModeProps) {
   return (
     <SlideStage
-      item={api.currentItem}
+      items={api.items}
+      currentIndex={api.currentIndex}
       direction={api.direction}
       transition={api.activeTransition}
       durationSec={api.transitionDuration}

@@ -20,7 +20,8 @@ launch a fullscreen show that cycles through them with smooth transitions.
 - **Any content on screen** — websites & live leaderboards (auto-refreshing iframes), images, MP4 video, YouTube, PDFs, and Markdown announcements.
 - **Drag-and-drop playlist** — reorder, duplicate, disable, search, shuffle, loop. Auto-saved locally.
 - **A real on-air preview** — the editor shows your show playing live before you go fullscreen.
-- **Presentation mode** — built for TVs & projectors: hidden UI, auto-hiding cursor, keyboard control.
+- **Presentation mode** — built for TVs & projectors: hidden UI, auto-hiding cursor, keyboard control, and an optional hands-off mode where the control bar never appears.
+- **Websites stay loaded** — a slide keeps its state across the loop, so a live leaderboard never flash-reloads when the show comes back to it (it refreshes only on its own interval).
 - **Display modes** — slideshow, grid (2/4/6/9), split screen, picture-in-picture, and random showcase.
 - **10 transitions** — fade, slide, zoom, scale, flip, blur, curtain, carousel, wave, and random.
 - **Overlays** — live clock, countdown, event title & logo, sponsor banner, QR code, and a footer ticker.

@@ -8,7 +8,8 @@ export function PipMode({ api }: ModeProps) {
   return (
     <div className="relative h-full w-full">
       <SlideStage
-        item={api.currentItem}
+        items={api.items}
+        currentIndex={api.currentIndex}
         direction={api.direction}
         transition={api.activeTransition}
         durationSec={api.transitionDuration}

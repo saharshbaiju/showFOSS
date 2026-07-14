@@ -48,6 +48,7 @@ export function PresentationPlayer({
   const containerRef = useRef<HTMLDivElement>(null)
   const presentationBg = useSettingsStore((s) => s.theme.presentationBg)
   const showProgress = useSettingsStore((s) => s.playback.showProgress)
+  const controlsEnabled = useSettingsStore((s) => s.playback.showControls)
   const fullscreen = useFullscreen(containerRef)
   const idle = useIdleCursor(interactive, 3000)
 
@@ -67,7 +68,10 @@ export function PresentationPlayer({
     interactive,
   )
 
-  const controlsVisible = showControls && !(interactive && idle)
+  // The floating bar only exists when this surface allows it AND the user
+  // hasn't turned controls off — so with it off, moving the mouse does nothing.
+  const controlsBar = showControls && controlsEnabled
+  const controlsVisible = controlsBar && !(interactive && idle)
   const singleSlide = api.mode !== 'grid' && api.mode !== 'split'
 
   return (
@@ -92,7 +96,7 @@ export function PresentationPlayer({
         </>
       )}
 
-      {showControls && (
+      {controlsBar && (
         <ControlsOverlay
           api={api}
           visible={controlsVisible}

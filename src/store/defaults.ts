@@ -44,6 +44,7 @@ export const defaultSettings: AppSettings = {
     autoPlay: true,
     shuffleOnLoop: false,
     showProgress: true,
+    showControls: true,
   },
   widgets: defaultWidgets,
 }

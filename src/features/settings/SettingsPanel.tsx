@@ -221,6 +221,12 @@ function PlaybackSection() {
           checked={playback.showProgress}
           onChange={(showProgress) => setPlayback({ showProgress })}
         />
+        <ToggleRow
+          label="On-screen controls"
+          description="Show the floating control bar when the cursor moves. Turn off for a hands-off display — keyboard shortcuts still work."
+          checked={playback.showControls}
+          onChange={(showControls) => setPlayback({ showControls })}
+        />
       </div>
     </div>
   )

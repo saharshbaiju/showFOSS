@@ -24,6 +24,9 @@ export interface PlaybackDefaults {
   shuffleOnLoop: boolean
   /** Show progress bar during presentation. */
   showProgress: boolean
+  /** Show the floating on-screen control bar (it reveals on cursor movement).
+   * Turn off for a hands-off kiosk where the mouse shouldn't summon controls. */
+  showControls: boolean
 }
 
 export interface AppSettings {
